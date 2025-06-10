@@ -30,7 +30,7 @@ def copy_and_rename_file(file_path_list: list, output_dir):
         - file_path_list: 입력 파일 경로들
         - output_dir: 결과 저장 폴더 경로
     """
-    output_dir.mkdir(parents=True, exist_ok=True)   # 폴더가 존재하지 않으면 생성
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     for file_path in file_path_list:
         old_file = file_path
