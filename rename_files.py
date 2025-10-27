@@ -3,12 +3,12 @@ from pathlib import Path
 import shutil
 
 
-def get_file_path(input_dir) -> list:
+def get_file_path(input_dir: Path) -> list:
     """
     특정 폴더 내 파일들을 리스트에 저장한다.
 
     Params:
-        - input_dir: 입력 폴더 경로 (<class 'pathlib.WindowsPath'>)
+        - input_dir: 입력 폴더 경로
 
     Returns:
         - 파일 경로들
@@ -21,13 +21,13 @@ def get_file_path(input_dir) -> list:
     return file_path_list
 
 
-def copy_and_rename_file(file_path_list: list, output_dir, file_prefix: str):
+def copy_and_rename_file(file_path_list: list, output_dir: Path, file_prefix: str):
     """
     파일명에서 특정 접두사를 제거하여 이름을 변경한다.
 
     Params:
         - file_path_list: 이름 수정할 파일들을 저장한 리스트
-        - output_dir: 결과 저장 폴더 경로 (<class 'pathlib.WindowsPath'>)
+        - output_dir: 결과 저장 폴더 경로
         - file_prefix: 제거할 접두사
     """
     output_dir.mkdir(parents=True, exist_ok=True)
