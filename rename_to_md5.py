@@ -4,12 +4,12 @@ import hashlib
 import shutil
 
 
-def get_file_path(input_dir) -> list:
+def get_file_path(input_dir: Path) -> list:
     """
     특정 폴더 내 파일들을 리스트에 저장한다.
 
     Params:
-        - input_dir: 입력 폴더 경로 (<class 'pathlib.WindowsPath'>)
+        - input_dir: 입력 폴더 경로
 
     Returns:
         - 파일 경로들
